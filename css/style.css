@@ -1,0 +1,576 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto Condensed', sans-serif; */
+/* ------ETIQUETAS SEMANTICAS----- */
+header{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+main{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+footer{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* -----NAVBAR------ */
+header div a img{
+    width: 90px;
+    height: 90px;
+    border-radius: 40px;
+}
+.navbar li{
+    color: aquamarine;
+    display: inline;
+}
+.navbar a{
+    color: white;
+    padding: 20px 20px;
+    font-size: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+} 
+
+/* --------------->INDEX<------------ */
+/* ------GRID_------- */
+.hero-index{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 95px 1fr auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+}
+.header-index{
+    grid-area: header;
+}
+.main-index{
+    grid-area: main;
+}   
+.footer-index{
+    grid-area: footer;
+}
+/* -----GRID----- */
+.main-index{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 600px 600px 400px 250px;
+    grid-template-areas: 
+    "banner"
+    "entrena"
+    "box"
+    "frase"
+    ;
+}
+
+/* .banner img{
+    width: 300px;
+    height: 300px;
+} */
+/* -----------grid--------- */
+.banner{
+    background-color: black;
+    grid-area: banner;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.titulo-banner{
+    grid-column-start: 6;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font: bold;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    padding-top: 80px;
+}
+.parrafo-banner{
+    color: white;
+    grid-column-start: 6;
+    grid-column-end: 11;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    font-size: 35px;
+    padding-top: 50px;
+}
+.logo-banner{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.logo-banner img{
+    width: 100%;
+    height: auto;
+}
+
+/*--------------grid-----------------------------  */
+.entrena{
+    color: white;
+    display: grid;
+    grid-area: entrena;
+    background-image: url("../assets/img/gimnasio.jpg");
+    width: 100%;
+    height: 600px;
+    background-repeat: none;
+    background-size: cover;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat( 7, 1fr);
+}
+.titulo-entrena{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-size: 50px;
+    font: bold;
+}
+.link-entrena{  
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    background-color: rgb(235, 17, 17);
+    color: black;
+    font-size: 30px;
+    height: 50px;
+    width: 100px;
+    border-radius: 50px;
+    border: #221e1e solid 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parrafo-entrena{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    font-size: 40px;
+}
+.img-entrena{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    grid-column-start: 5;    
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 6;
+}
+.img-entrena img{
+    width: 100%;
+    height: auto;
+}
+.box{
+    grid-area: box;
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+}
+.card1{
+    color: white;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}  
+.card1 img{
+    width: 100%;
+    height: auto;
+    border-radius: 100px;
+}
+.card2{
+    color: white;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.card2 img{
+    width: 100%;
+    height: auto;
+    border-radius: 100px;
+}
+.card3{
+    color: white;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.card3 img{
+    width: 100%;
+    height: auto;
+    border-radius: 100px;
+} /*
+.card{
+    width: 220px;
+    border: 2px solid red;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.card img{
+    width: 150px;
+    height: 200px;
+    border-radius: 100px;
+}
+.card div{
+    color: white;
+ } */  
+.frase{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: frase;
+    background-image: url("../assets/img/frase-index.jpg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.frase p{
+    color: white;
+    -webkit-text-stroke: 3px black;
+    font-size: 70px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+/* --------------FOOTER----------- */
+footer{
+    background-color: black;
+    display: flex;
+    
+}
+footer div{
+    padding: 20px;
+}
+.list-footer h2{
+    color: white;
+}
+.list-footer ul{
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+}
+.list-footer-2{
+    color: white;
+}
+.list-footer-2 ul{
+    color: white;
+    list-style-type: none;
+}
+.banner-footer img{
+    width: 100px;
+    height: 100x;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+/* --------- SEDE------------------------------------*/
+/* ------------------------- -----------------------*/
+/* ----------------------------------------------- */
+.body-sede{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 95px auto auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+}
+.header-sede{
+    grid-area: header;
+}
+.main-sede{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 200px 700px 700px;
+
+}
+.footer-sede{
+    grid-area: footer;    
+}
+.ubicacion-sede{
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+
+}
+.titulo-sede{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-top: 20px;
+    background-color: red;
+    border-radius: 15px;
+    width: 260px;
+    height: 40px;
+}
+.maps{
+    grid-column-start: 3;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end: 6;
+}
+.parrafo-sede{
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    padding-top: 30px;
+}
+.ubicacion-sede{
+    background-color: black;
+}
+.fotos-sede{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+.titulo-fotos-sede{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-size: 25px;
+    margin: 20px 0px 0px 0px;
+    padding-left: 5px;
+    background-color: red;
+    border-radius: 15px;
+    width: auto;
+    height: auto;
+}
+.imagen-central {
+    height: 300px;
+    width: 400px;
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 6;
+}
+.imagen-lateral-1{
+    height: 150px;
+    width: 200px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.imagen-lateral-2{
+    height: 150px;
+    width: 200px;
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.parrafo-sede-2{
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    text-align: center;
+}
+/*----------------      ---------------------------------*/
+
+/* ------------------ PAGINA NOSOTROS-------------- */
+ /*----------------------------------------------- */
+/* -----------------------------------------------*/
+.body-nosotros{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 95px auto auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+}
+.header-nosotros{
+grid-area: header;
+}
+.main-nosotros{
+grid-area: main;
+display: grid;
+grid-template-columns: 100%;
+grid-template-rows: 200px 500px 500px;
+}
+.footer-nosotros{
+grid-area: footer;
+}
+.presentacion{
+    font-size: 30px;
+    padding-top: 55px;
+    text-align: center;
+}
+.profesora{
+    background-color: black;
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+.profesora div img{
+    height: 350px;
+    width: 290px;
+}
+.profesora-img{
+    grid-column-start: 2;    
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.profesora-titulo{
+    color: white;
+    font-size: 3vh;
+    grid-column-start: 6;    
+    grid-column-end: 11;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.profesora-parrafo{
+    color: white;
+    padding-top: 40px;
+    font-size: 2rem;
+    grid-column-start: 6;
+    grid-column-end: 11;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.alumnos-fotos{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+
+}
+.titulo-alumnos{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.foto-alumno{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.foto-alumno img{
+    height: 300px;
+    width: 300px;
+}
+.foto-grupo{
+    grid-column-start: 5;
+    grid-column-end: 10;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.foto-grupo img{
+    height: 300px;
+    width: 400px;
+}
+
+/* paagina shop */
+.selector-tienda{
+    background-color: #3a3737;
+}
+.selector-tienda div input{
+    border: 2px solid #494545;
+    border-radius: 10x;
+    background-color: #534f4f;
+}
+.box-tienda{
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+.card-tienda{
+    width: 220px;
+    height: 300px;
+    border: 3px solid red;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.card-tienda img{
+    height: 150px;
+    width: 200px;
+}
+/* competidores */
+.banner-competidores{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 100px;
+    justify-content: center;
+}
+.logo-dojo img{
+    width: 100px;
+    height: 100px;
+}
+.card-competidores{
+    width: 265px;
+    height: 340px;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+.card-competidores img{
+    width: 250px;
+    height: 300px;
+}
+.box-competidores{
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 10px;
+    column-gap: 30px;
+    justify-content: center;
+}
