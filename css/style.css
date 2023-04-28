@@ -99,7 +99,7 @@ header div a img{
 }
 .titulo-banner{
     grid-column-start: 6;
-    grid-column-end: 9;
+    grid-column-end: 10;
     grid-row-start: 1;
     grid-row-end: 2;
     font: bold;
@@ -109,6 +109,7 @@ header div a img{
     padding-top: 80px;
 }
 .parrafo-banner{
+    
     color: white;
     grid-column-start: 6;
     grid-column-end: 11;
@@ -116,6 +117,13 @@ header div a img{
     grid-row-end: 3;
     font-size: 35px;
     padding-top: 50px;
+}
+.parrafo-banner2{
+    padding-top: 20px;
+    font-size: 27px;
+}
+.parrafo-banner2 strong{
+    color: rebeccapurple;
 }
 .logo-banner{
     width: 100%;
@@ -151,6 +159,7 @@ header div a img{
     grid-row-end: 2;
     font-size: 50px;
     font: bold;
+    padding-top: 30px;
 }
 .link-entrena{  
     grid-column-start: 4;
@@ -164,6 +173,7 @@ header div a img{
     width: 100px;
     border-radius: 50px;
     border: #221e1e solid 2px;
+    margin: 20px 20px 20px 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,7 +183,8 @@ header div a img{
     grid-column-end: 5;
     grid-row-start: 2;
     grid-row-end: 5;
-    font-size: 40px;
+    font-size: 35px;
+    padding-top: 20px;
 }
 .img-entrena{
     width: 100%;
@@ -196,6 +207,11 @@ header div a img{
     grid-template-rows: repeat(3, 1fr);
 
 }
+.contenido-card{
+    text-align: center;
+    justify-content: center;
+
+}
 .card1{
     color: white;
     width: 100%;
@@ -206,6 +222,7 @@ header div a img{
     grid-row-start: 2;
     grid-row-end: 3;
 }  
+
 .card1 img{
     width: 100%;
     height: auto;
