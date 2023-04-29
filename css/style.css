@@ -642,7 +642,32 @@ grid-area: footer;
     height: 70%;
     width: 100%;
 }
-/* competidores */
+/* ----------------------- C O M P E T I D O R E S ----------------------------- */
+/* -----------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------- */
+.hero-competidores{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 95px 1fr auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+}
+.header-competidores{
+    grid-area: header;
+}
+.main-competidores{
+    grid-area: main;
+    display: grid;
+    grid-template-columns:100%;
+    grid-template-rows: 200px auto 1fr;
+}
+
+.footer-competidores{
+    grid-area: footer;
+}
 .banner-competidores{
     background-color: black;
     color: white;
@@ -650,6 +675,9 @@ grid-area: footer;
     flex-flow: row wrap;
     column-gap: 100px;
     justify-content: center;
+}
+.banner-competidores h2{
+    margin-top: 33px;
 }
 .logo-dojo img{
     width: 100px;
@@ -668,9 +696,63 @@ grid-area: footer;
     height: 300px;
 }
 .box-competidores{
-    display: flex;
-    flex-flow: row wrap;
-    row-gap: 10px;
-    column-gap: 30px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 50px;
+    margin: 50px 0px 50px 0px;
+}
+.cardcomp1{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.cardcomp2{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.cardcomp3{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.cardcomp4{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.cardcomp5{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.cardcomp6{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.cardcomp7{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.cardcomp8{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.cardcomp9{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
 }
