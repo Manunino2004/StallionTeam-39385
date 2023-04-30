@@ -373,7 +373,7 @@ a{
     grid-area: main;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 200px 700px 700px;
+    grid-template-rows: auto 600px 700px;
 
 }
 .footer-sede{
@@ -406,9 +406,9 @@ a{
 .parrafo-sede{
     grid-column-start: 4;
     grid-column-end: 7;
-    grid-row-start: 7;
-    grid-row-end: 8;
-    padding-top: 30px;
+    grid-row-start: 8;
+    grid-row-end: 9;
+    
 }
 .ubicacion-sede{
     background-color: black;
@@ -485,7 +485,7 @@ grid-area: header;
 grid-area: main;
 display: grid;
 grid-template-columns: 100%;
-grid-template-rows: 200px 500px 500px;
+grid-template-rows: auto 500px 500px;
 }
 .footer-nosotros{
 grid-area: footer;
@@ -942,6 +942,15 @@ grid-area: footer;
         margin: 40px 30px 40px 160px;
     }
 }
+@media(max-width:486px){
+    header div a img{
+        margin: 0px 0px 0px 180px;
+    }
+    .presentacion{
+        padding:0px 0px 10px 0px;
+        font-size: 20px;
+    }
+}
 @media(max-width:468px){
     header div a img{
         margin: 0px 0px 0px 160px;
@@ -950,6 +959,10 @@ grid-area: footer;
     }
     .menu{
         padding-right: 10px;
+    }
+    .presentacion{
+        padding:0px 0px 10px 0px;
+        font-size: 20px;
     }
     .box-competidores{
         margin: 40px 30px 40px 130px;
@@ -967,6 +980,89 @@ grid-area: footer;
     }
 }
 
+
+@media(max-width:426px){
+    header{
+        gap: 10px;
+    }
+    header div a img{
+        width: 70px;
+        margin: 0px 0px 0px 160px;
+        height: 70px;
+        border-radius: 40px;
+    }
+    .box-competidores{
+        margin: 40px 30px 40px 100px;
+    }
+
+}
+@media(max-width:395px){
+    .banner-competidores{
+        column-gap: 20px;
+    }
+    .banner-competidores h2{
+        margin-top: 20px;
+        font-size: 22px;
+    }
+    .logo-dojo{
+        width: 70px;
+        height: 70px;
+    }
+    .logo-dojo img{
+        width: 70px;
+        height: 70px;
+    }
+    .list-footer-2 h2{
+        font-size: 22px;
+    }
+    .list-footer-2 ul li{
+        font-size: 16px;
+    } 
+    .list-footer h2{
+        font-size: 22px;
+    }
+    .list-footer ul li{
+        font-size: 16px;
+    } 
+}
+@media(max-width:384px){
+    header div a img{
+        width: 70px;
+        margin: 0px 0px 0px 145px;
+        height: 70px;
+        border-radius: 40px;
+    }
+    .presentacion{
+        padding:0px 0px 10px 0px;
+        font-size: 15px;
+    }
+    .banner-competidores{
+        column-gap: 20px;
+    }
+    .banner-competidores h2{
+        margin-top: 20px;
+        font-size: 22px;
+    }
+    .logo-dojo{
+        width: 65px;
+        height: 65px;
+    }
+    .logo-dojo img{
+        width: 65px;
+        height: 65px;
+    }
+    .box-competidores{
+        margin: 40px 30px 40px 80px;
+    }
+    .banner-footer img{
+        width: 90px;
+        height: 90x;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        }
+}
 @media(max-width:320px){
     header{
         gap: 20px;
@@ -996,7 +1092,7 @@ grid-area: footer;
         height: 75px;
     }
     .box-competidores{
-        margin: 40px 30px 40px 56px;
+        margin: 40px 20px 40px 60px;
     }
     footer{
     display: flex;
