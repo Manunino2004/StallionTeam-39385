@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
     <title>Nosotros</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -41,7 +42,7 @@
                 <h3>Since 2013</h3>
             </div>
             <section class="profesora">
-                <h2 class="profesora-titulo">Paola "La yegua" Bernachea"</h2>
+                <h2 class="profesora-titulo">Paola <strong>"La yegua"</strong>  Bernachea</h2>
                 <p class="profesora-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elullam magnam error tempora molestias voluptate
                 alias sed eius placeat</p>
                 <div class="profesora-img">
@@ -49,14 +50,42 @@
                 </div>
             </section>
             <section class="alumnos-fotos">
-                <h2 class="titulo-alumnos">Alumnos</h2>
+                <h2 class="titulo-alumnos"><strong>Alumnos</strong></h2>
                 <div class="foto-alumno">
                     <img src="../assets/img/mauroCoria.jpg" alt="">
                     <h3>Mauro Coria</h3>
                 </div>
-                <div class="foto-grupo">
-                    <img src="../assets/img/fotoGrupo.jpg" alt="">
-                    <h3>Team</h3>
+                <div id="carouselExampleIndicators" class="carousel slide ">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../assets/img/fotoGrupo.jpg" class="d-block w-100 fotog1" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../assets/img/fotoGrupo2.jpg" class="d-block w-100 fotog2" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../assets/img/fotoGrupo3.jpg" class="d-block w-100 fotog3" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    <p class="pteam">Team</p>
                 </div>
             </section>
         </main>
@@ -84,6 +113,7 @@
             </div>
         </footer>
     </div>
+    <script src="../js/bootstrap.min.js"></script>
 </body>
 
 </html>
