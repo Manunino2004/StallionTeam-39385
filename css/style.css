@@ -694,9 +694,12 @@ font-size: 30px;
     grid-area: main;
     display: grid;
     grid-template-columns:100%;
-    grid-template-rows: auto auto 1fr;
-}
+    grid-template-rows: auto auto 1100px;
 
+}
+/* .box-competidores{
+    padding: 50px 0px 50px 0px;
+} */
 .footer-competidores{
     grid-area: footer;
 }
@@ -716,7 +719,7 @@ font-size: 30px;
     height: 100px;
 }
 .card-competidores{
-    width: 265px;
+    width: 100%;
     height: 340px;
     position: relative;
     display: inline-block;
@@ -724,7 +727,7 @@ font-size: 30px;
 }
 .card-competidores img{
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 .card-competidores .overlay{
     position: absolute;
@@ -752,64 +755,62 @@ font-size: 30px;
 }
 .box-competidores{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 50px;
-    margin: 50px 0px 50px 0px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
 }
 .cardcomp1{
     grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
 .cardcomp2{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
 .cardcomp3{
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-column-start: 8;
+    grid-column-end: 10;
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
 .cardcomp4{
     grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
 }
 .cardcomp5{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 5;
 }
 .cardcomp6{
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-column-start: 8;
+    grid-column-end: 10;
+    grid-row-start: 4;
+    grid-row-end: 5;
 }
 .cardcomp7{
     grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-column-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 7;
 }
 .cardcomp8{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 6;
+    grid-row-end: 7;
 }
 .cardcomp9{
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-column-start: 8;
+    grid-column-end: 10;
+    grid-row-start: 6;
+    grid-row-end: 7;
 }
 @media(max-width:956px){
     header div a img{
@@ -822,24 +823,6 @@ font-size: 30px;
     .menu ul{
         padding: 0px 0px;
     }
-    /* -------COMPETIDORES------------ */
-    .box-competidores{
-        display: flex;
-        flex-wrap: wrap;
-        margin: 40px 0px 40px 60px;
-        grid-gap: 25px;
-    }
-}
-/* @media(max-width:922px)
-{
-
-} */
-@media(max-width:906px){
-        /* -------COMPETIDORES------------ */
-    .box-competidores{
-        margin: 40px 0px 40px 190px;
-    }
-
 }
 @media(max-width: 768px){
     header div a img{
@@ -881,12 +864,70 @@ font-size: 30px;
         right: 0;
     }
     /* ---------    COMPETIDORES---------- */
-    .box-competidores{
-        margin: 40px 30px 40px 150px;
+    .main-competidores{
+        grid-template-rows: auto auto 1900px;
+    
     }
-    .card-competidores{
-        width:220px;
-        height: 260px;
+    .box-competidores{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(11, 1fr);
+    }
+    .cardcomp1{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .cardcomp2{
+        grid-column-start: 5;
+        grid-column-end: 7;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .cardcomp3{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    .cardcomp4{
+        grid-column-start: 5;
+        grid-column-end: 7;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    /* fila 3 */
+    .cardcomp5{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+    .cardcomp6{
+        grid-column-start: 5;
+        grid-column-end: 7;
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+    /* fila 4 */
+    .cardcomp7{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 8;
+        grid-row-end: 9;
+    }
+    .cardcomp8{
+        grid-column-start: 5;
+        grid-column-end: 7;
+        grid-row-start: 8;
+        grid-row-end: 9;
+    }
+    .cardcomp9{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 10;
+        grid-row-end: 11;
     }
     /* ---------    NOSOTROS   ---------- */
     .main-nosotros{
@@ -953,13 +994,6 @@ font-size: 30px;
         height: 90px;
         border-radius: 40px;
     }
-    .box-competidores{
-        margin: 40px 30px 40px 150px;
-    }
-    .card-competidores{
-        width:200px;
-        height: 260px;
-    }
 }
 @media(max-width:605px){
 
@@ -971,34 +1005,19 @@ font-size: 30px;
         width: 100px;
         height: 100px;
     }
-    .box-competidores{
-        margin: 40px 30px 40px 120px;
-    }
 }
 
 @media(max-width:580px){
     header div a img{
         margin: 0px 0px 0px 210px;
     }
-    .box-competidores{
-        margin: 40px 30px 40px 80px;
-    }
-    .card-competidores{
-        width:220px;
-        height: 260px;
-    }
 }
 @media(max-width:574px){
-    .box-competidores{
+    /* .box-competidores{
         margin: 40px 30px 40px 160px;
-    }
+    } */
     header div a img{
         margin: 0px 0px 0px 190px;
-    }
-}
-@media(max-width:534px){
-    .box-competidores{
-        margin: 40px 30px 40px 160px;
     }
 }
 @media(max-width:486px){
@@ -1023,12 +1042,7 @@ font-size: 30px;
         padding:0px 0px 10px 0px;
         font-size: 20px;
     }
-    .box-competidores{
-        margin: 40px 30px 40px 130px;
-    }
-    .banner-competidores h2{
-        font-size: 25px;
-    }
+
     .logo-dojo{
         width: 75px;
         height: 75px;
@@ -1081,10 +1095,71 @@ font-size: 30px;
         height: 70px;
         border-radius: 40px;
     }
-    .box-competidores{
-        margin: 40px 30px 40px 100px;
+    /* ---------    COMPETIDORES---------- */
+    .main-competidores{
+        grid-template-rows: auto auto 3200px;
     }
-
+    .box-competidores{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(19, 1fr);
+    }
+    .cardcomp1{
+        grid-column-start: 2;
+        grid-column-end: 7;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .cardcomp2{
+        grid-column-start: 2;
+        grid-column-end: 7;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    .cardcomp3{
+        grid-column-start: 2;
+        grid-column-end: 7;
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+    .cardcomp4{
+        grid-column-start: 2;
+        grid-column-end: 7;
+        grid-row-start: 8;
+        grid-row-end: 9;
+    }
+    /* fila 3 */
+    .cardcomp5{
+        grid-column-start: 2;
+        grid-column-end: 7;
+        grid-row-start: 10;
+        grid-row-end: 11;
+    }
+    .cardcomp6{
+        grid-column-start: 2;
+        grid-column-end: 7;
+        grid-row-start: 12;
+        grid-row-end: 13;
+    }
+    /* fila 4 */
+    .cardcomp7{
+        grid-column-start: 2;
+        grid-column-end: 7;
+        grid-row-start: 14;
+        grid-row-end: 15;
+    }
+    .cardcomp8{
+        grid-column-start: 2;
+        grid-column-end: 7;
+        grid-row-start: 16;
+        grid-row-end: 17;
+    }
+    .cardcomp9{
+        grid-column-start: 2;
+        grid-column-end: 7;
+        grid-row-start: 18;
+        grid-row-end: 19;
+    }
 }
 @media(max-width:395px){
     .banner-competidores{
@@ -1141,17 +1216,6 @@ font-size: 30px;
         width: 65px;
         height: 65px;
     }
-    .box-competidores{
-        margin: 40px 30px 40px 80px;
-    }
-    .banner-footer img{
-        width: 90px;
-        height: 90x;
-    }
-    /* footer{
-        display: flex;
-        flex-direction: column;
-        } */
 }
 @media(max-width:320px){
     header{
@@ -1180,9 +1244,6 @@ font-size: 30px;
     .logo-dojo img{
         width: 75px;
         height: 75px;
-    }
-    .box-competidores{
-        margin: 40px 20px 40px 60px;
     }
     footer{
     display: flex;
