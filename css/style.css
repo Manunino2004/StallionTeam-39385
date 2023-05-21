@@ -1,1253 +1,1465 @@
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* font-family: 'Open Sans', sans-serif;
-font-family: 'Roboto Condensed', sans-serif; */
-/* ------ETIQUETAS SEMANTICAS----- */
-header{
-    width: 100%;
-    padding: 0 20px;
-    background-color: black;
-    display: flex;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 150px;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Roboto Condensed', sans-serif;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
+header {
+  width: 100%;
+  padding: 0 20px;
+  background-color: black;
+  display: flex;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 150px;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+header div a img {
+  width: 90px;
+  margin: 0px 0px 0px 60px;
+  height: 90px;
+  border-radius: 40px;
+}
+header .menu li {
+  color: aquamarine;
+  display: inline;
+}
+header .menu a {
+  color: white;
+  padding: 10px 10px;
+  font-size: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+header .menu ul {
+  text-transform: uppercase;
+  transition: 0, 4s;
+  padding: 0 10px;
+}
+header .mostrar-menu,
+header .esconder-menu {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+  transition: 0, 4s;
+}
+header .mostrar-menu {
+  order: 1;
+}
+header .menu a:hover,
+header .mostar-menu:hover,
+header .esconder-menu:hover {
+  color: rgb(40, 78, 78);
+}
+header #check {
+  display: none;
 }
 
-main{
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Roboto Condensed', sans-serif;
+footer {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: black;
+  display: flex;
 }
-footer{
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Roboto Condensed', sans-serif;
+footer div {
+  padding: 20px;
 }
 
-/* -----NAVBAR------ */
-header div a img{
+.list-footer h2 {
+  color: white;
+}
+.list-footer ul {
+  padding-left: 0;
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+}
+.list-footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.list-footer-2 {
+  color: white;
+}
+.list-footer-2 ul {
+  padding-left: 0;
+  color: white;
+  list-style-type: none;
+}
+.list-footer-2 ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.banner-footer img {
+  width: 100px;
+  height: 100x;
+}
+
+.hero-competidores {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 95px auto auto;
+  grid-template-areas: "header" "main" "footer";
+}
+.hero-competidores .header-competidores {
+  grid-area: header;
+}
+.hero-competidores .main-competidores {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto;
+}
+.hero-competidores .main-competidores .presentacion {
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.hero-competidores .banner-competidores {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 100px;
+  justify-content: center;
+}
+.hero-competidores .banner-competidores h2 {
+  margin-top: 33px;
+}
+.hero-competidores .banner-competidores div img {
+  width: 100px;
+  height: 100px;
+}
+.hero-competidores .box-competidores {
+  margin: 20px 0px 20px 0px;
+  grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.hero-competidores .box-competidores div {
+  width: 100%;
+  height: 340px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+.hero-competidores .box-competidores div img {
+  width: 100%;
+  height: 100%;
+}
+.hero-competidores .box-competidores div .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero-competidores .box-competidores div:hover .overlay {
+  opacity: 1;
+}
+.hero-competidores .box-competidores .card .overlay p {
+  max-width: 90%;
+  margin: 0 auto;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+.hero-competidores .footer-competidores {
+  grid-area: footer;
+}
+
+.cardcomp1 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.cardcomp2 {
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.cardcomp3 {
+  grid-column-start: 8;
+  grid-column-end: 10;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.cardcomp4 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.cardcomp5 {
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.cardcomp6 {
+  grid-column-start: 8;
+  grid-column-end: 10;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.cardcomp7 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.cardcomp8 {
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.cardcomp9 {
+  grid-column-start: 8;
+  grid-column-end: 10;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.body-nosotros {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 95px auto auto;
+  grid-template-areas: "header" "main" "footer";
+}
+
+.header-nosotros {
+  grid-area: header;
+}
+
+.footer-nosotros {
+  grid-area: footer;
+}
+
+.main-nosotros {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 500px 500px;
+}
+
+.presentacion {
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.profesora {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+.profesora h2 {
+  color: white;
+  font-size: 28px;
+  padding-top: 20px;
+  grid-column-start: 6;
+  grid-column-end: 11;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.profesora h2 strong {
+  color: rebeccapurple;
+}
+.profesora div {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.profesora div img {
+  height: 350px;
+  width: 100%;
+}
+.profesora p {
+  color: white;
+  padding-top: 40px;
+  font-size: 25px;
+  grid-column-start: 6;
+  grid-column-end: 11;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.alumnos-fotos {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+}
+.alumnos-fotos h2 {
+  background-color: red;
+  border-radius: 10px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.alumnos-fotos div {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+.alumnos-fotos div img {
+  height: 300px;
+  width: 100%;
+}
+.alumnos-fotos .carousel {
+  grid-column-start: 5;
+  grid-column-end: 10;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+.fotog {
+  height: 300px;
+  width: 400px;
+}
+
+.hero-index {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 95px 1fr auto;
+  grid-template-areas: "header" "main" "footer";
+}
+
+.header-index {
+  grid-area: header;
+}
+
+.main-index {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto 250px;
+}
+
+.banner {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto 1fr 1fr;
+}
+.banner h1 {
+  font: bold;
+  font-size: 60px;
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+  grid-column-start: 4;
+  grid-column-end: 12;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.parrafo-banner {
+  color: white;
+  font-size: 35px;
+  padding-top: 20px;
+  grid-column-start: 6;
+  grid-column-end: 11;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.parrafo-banner .parrafo-banner2 {
+  padding-top: 20px;
+  font-size: 27px;
+}
+.parrafo-banner .parrafo-banner2 strong {
+  color: rebeccapurple;
+}
+
+.logo-banner {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.logo-banner img {
+  width: 100%;
+  height: auto;
+}
+
+.entrena {
+  color: white;
+  display: grid;
+  background-image: url("../assets/img/entrena-foto.jpg");
+  width: 100%;
+  height: 600px;
+  background-repeat: none;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+.entrena h2 {
+  font-size: 50px;
+  font: bold;
+  padding-top: 30px;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.entrena p {
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.9);
+  height: auto;
+  width: auto;
+  backdrop-filter: blur(1px);
+  font-size: 30px;
+  padding-top: 20px;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 5;
+}
+.entrena p strong {
+  color: rebeccapurple;
+}
+.entrena p a {
+  background-color: rgb(235, 17, 17);
+  color: black;
+  font-size: 20px;
+  height: 30px;
+  width: 60px;
+  border-radius: 50px;
+  border: #221e1e solid 2px;
+  margin: 20px 20px 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  padding: 30px 0px 30px 0px;
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+.box div {
+  text-align: center;
+  font-size: 18px;
+  color: white;
+}
+.box div img {
+  width: 100%;
+  border-radius: 100px;
+}
+
+.card1 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.card2 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.card3 {
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.frase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/img/frase-index.jpg");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.frase p {
+  color: white;
+  -webkit-text-stroke: 3px black;
+  font-size: 70px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.footer-index {
+  grid-area: footer;
+}
+
+.hero-shop {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 95px 1fr auto;
+  grid-template-areas: "header" "main" "footer";
+}
+
+.header-shop {
+  grid-area: header;
+}
+
+.main-shop {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto;
+}
+.main-shop section {
+  display: grid;
+  grid-template-columns: repeat(6);
+  grid-template-rows: repeat(5);
+  grid-gap: 20px;
+  margin-bottom: 30px;
+}
+.main-shop section div {
+  width: 220px;
+  height: 250px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.4) 100%);
+  border: 2px solid rgb(44, 43, 43);
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+.main-shop section div img {
+  margin: 0;
+  padding: 0;
+  height: 75%;
+  width: 100%;
+}
+.main-shop section div div h3 {
+  font-size: 20px;
+}
+.main-shop section div div p {
+  font-size: 16px;
+}
+
+.selector-tienda {
+  background-color: #3a3737;
+  display: flex;
+  padding: 10px 40px 10px 40px;
+  justify-content: space-between;
+}
+.selector-tienda h2 {
+  font-size: 40px;
+}
+.selector-tienda div input {
+  border: 2px solid #494545;
+  border-radius: 10x;
+  background-color: #534f4f;
+  width: 200px;
+  margin-top: 10px;
+}
+
+.cardshop1 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.cardshop2 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.cardshop3 {
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.cardshop4 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.cardshop5 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.cardshop6 {
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.titulo-shop {
+  border-radius: 10px;
+  width: 600px;
+  background-image: linear-gradient(to right, #7C0000, #7c1000);
+  font-size: 40px;
+  margin: 20px 0px 20px 50px;
+}
+
+.footer-shop {
+  grid-area: footer;
+}
+
+.body-sede {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 95px auto auto;
+  grid-template-areas: "header" "main" "footer";
+}
+
+.header-sede {
+  grid-area: header;
+}
+
+.main-sede {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 600px auto;
+}
+
+.presetacion {
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.ubicacion-sede {
+  background-color: black;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+}
+.ubicacion-sede h2 {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  margin-top: 20px;
+  background-color: red;
+  border-radius: 15px;
+  width: 280px;
+  height: 40px;
+}
+.ubicacion-sede div {
+  position: relative;
+  overflow: hidden;
+  grid-column-start: 3;
+  grid-column-end: 8;
+  grid-row-start: 2;
+  grid-row-end: 7;
+}
+.ubicacion-sede div iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.ubicacion-sede p {
+  margin: 20px 0px 0px 50px;
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 7;
+  grid-row-end: 8;
+}
+
+.fotos-sede {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+}
+
+.titulo-fotos-sede {
+  grid-column-start: 3;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  font-size: 25px;
+  margin: 20px 0px 0px 0px;
+  padding-left: 5px;
+  background-color: red;
+  border-radius: 15px;
+  width: 270px;
+  height: auto;
+}
+
+.imagen-central {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  grid-column-start: 5;
+  grid-column-end: 8;
+  grid-row-start: 3;
+  grid-row-end: 7;
+}
+
+.imagen-lateral-1 {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 6;
+}
+
+.imagen-lateral-2 {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  grid-column-start: 9;
+  grid-column-end: 11;
+  grid-row-start: 4;
+  grid-row-end: 6;
+}
+
+.parrafo-sede-2 {
+  grid-column-start: 3;
+  grid-column-end: 8;
+  grid-row-start: 7;
+  grid-row-end: 8;
+  font-size: 25px;
+  text-align: center;
+}
+
+.footer-sede {
+  grid-area: footer;
+}
+
+@media (max-width: 998px) {
+  .entrena h2 {
+    font-size: 40px;
+  }
+  .entrena p {
+    font-size: 22px;
+  }
+  .frase p {
+    font-size: 50px;
+  }
+}
+@media (max-width: 956px) {
+  header div a img {
+    margin: 0px 0px 0px 30px;
+  }
+  header .menu a {
+    font-size: 18px;
+  }
+  .menu ul {
+    padding: 0px 0px;
+  }
+}
+@media (max-width: 768px) {
+  header div a img {
     width: 90px;
-    margin: 0px 0px 0px 60px;
+    margin: 0px 0px 0px 300px;
     height: 90px;
     border-radius: 40px;
-}
-.menu li{
-    color: aquamarine;
-    display: inline;
-}
-.menu a{
-    color: white;
-    padding: 10px 10px;
-    font-size: 25px;
-    text-decoration: none;
-    text-transform: uppercase;
-
-} 
-
-.menu ul{
-    text-transform: uppercase;
-    transition: 0,4s;
-    padding: 0 10px;
-}
-.mostrar-menu,
-.esconder-menu{
-    font-size: 30px;
-    cursor: pointer;
-    display: none;
-    transition: 0,4s;
-
-}
-.mostrar-menu{
-    order: 1;
-
-}
-.menu a:hover,
-.mostar-menu:hover,
-.esconder-menu:hover{
-    color: rgb(40, 78, 78);
-}
-#check{
-    display: none;
-}
-
-/* --------------->INDEX<------------ */
-/* ------GRID_------- */
-.hero-index{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 95px 1fr auto;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer"
-    ;
-}
-.header-index{
-    grid-area: header;
-}
-.main-index{
-    grid-area: main;
-}   
-.footer-index{
-    grid-area: footer;
-}
-/* -----GRID----- */
-.main-index{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 600px 600px 400px 250px;
-    grid-template-areas: 
-    "banner"
-    "entrena"
-    "box"
-    "frase"
-    ;
-}
-
-/* .banner img{
-    width: 300px;
-    height: 300px;
-} */
-/* -----------grid--------- */
-.banner{
-    background-color: black;
-    grid-area: banner;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-}
-.titulo-banner{
-    grid-column-start: 6;
-    grid-column-end: 10;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    font: bold;
-    font-size: 60px;
-    color: white;
+  }
+  header .mostrar-menu,
+header .esconder-menu {
+    display: block;
+  }
+  header .menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgb(49, 49, 49);
+    right: -100%;
+    top: 0;
     text-align: center;
-    padding-top: 80px;
-}
-.parrafo-banner{
-    
-    color: white;
-    grid-column-start: 6;
-    grid-column-end: 11;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    font-size: 35px;
-    padding-top: 50px;
-}
-.parrafo-banner2{
-    padding-top: 20px;
-    font-size: 27px;
-}
-.parrafo-banner2 strong{
-    color: rebeccapurple;
-}
-.logo-banner{
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-.logo-banner img{
-    width: 100%;
-    height: auto;
-}
-
-/*--------------grid-----------------------------  */
-.entrena{
-    color: white;
-    display: grid;
-    grid-area: entrena;
-    background-image: url("../assets/img/gimnasio.jpg");
-    width: 100%;
-    height: 600px;
-    background-repeat: none;
-    background-size: cover;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat( 7, 1fr);
-}
-.titulo-entrena{
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    font-size: 50px;
-    font: bold;
-    padding-top: 30px;
-}
-.link-entrena{  
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 6;
-    grid-row-end: 7;
-    background-color: rgb(235, 17, 17);
-    color: black;
-    font-size: 30px;
-    height: 50px;
-    width: 100px;
-    border-radius: 50px;
-    border: #221e1e solid 2px;
-    margin: 20px 20px 20px 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.parrafo-entrena{
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 5;
-    font-size: 35px;
-    padding-top: 20px;
-}
-.img-entrena{
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    grid-column-start: 5;    
-    grid-column-end: 7;
-    grid-row-start: 2;
-    grid-row-end: 6;
-}
-.img-entrena img{
-    width: 100%;
-    height: auto;
-}
-.box{
-    grid-area: box;
-    background-color: black;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-
-}
-.contenido-card{
-    text-align: center;
-    justify-content: center;
-
-}
-.card1{
-    color: white;
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}  
-
-.card1 img{
-    width: 100%;
-    height: auto;
-    border-radius: 100px;
-}
-.card2{
-    color: white;
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-.card2 img{
-    width: 100%;
-    height: auto;
-    border-radius: 100px;
-}
-.card3{
-    color: white;
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    grid-column-start: 6;
-    grid-column-end: 7;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-.card3 img{
-    width: 100%;
-    height: auto;
-    border-radius: 100px;
-}
-.frase{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-area: frase;
-    background-image: url("../assets/img/frase-index.jpg");
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.frase p{
-    color: white;
-    -webkit-text-stroke: 3px black;
-    font-size: 70px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-
-/* --------------FOOTER----------- */
-footer{
-    background-color: black;
-    display: flex;
-    
-}
-footer div{
+    padding: 100px 0px;
+    z-index: 100;
+    transition: 0.8s;
+  }
+  header .menu a {
+    display: block;
     padding: 20px;
-}
-.list-footer h2{
-    color: white;
-}
-.list-footer ul{
-    color: white;
-    text-decoration: none;
-    list-style-type: none;
-}
-.list-footer-2{
-    color: white;
-}
-.list-footer-2 ul{
-    color: white;
-    list-style-type: none;
-}
-.banner-footer img{
-    width: 100px;
-    height: 100x;
-}
-a{
-    text-decoration: none;
-    color: white;
-}
-/* --------- SEDE------------------------------------*/
-/* ------------------------- -----------------------*/
-/* ----------------------------------------------- */
-.body-sede{
+  }
+  header .esconder-menu {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  header #check:checked ~ .menu {
+    right: 0;
+  }
+  /* ---------    COMPETIDORES---------- */
+  .main-competidores {
+    grid-template-rows: auto auto auto;
+  }
+  .main-competidores .box-competidores {
+    grid-gap: 20px;
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 95px auto auto;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer"
-    ;
-}
-.header-sede{
-    grid-area: header;
-}
-.main-sede{
-    grid-area: main;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto 600px 700px;
-
-}
-.footer-sede{
-    grid-area: footer;    
-}
-.ubicacion-sede{
-    color: white;
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-
-}
-.titulo-sede{
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    /* fila 3 */
+    /* fila 4 */
+  }
+  .main-competidores .box-competidores .cardcomp1 {
     grid-column-start: 2;
-    grid-column-end: 5;
+    grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
-    margin-top: 20px;
-    background-color: red;
-    border-radius: 15px;
-    width: 260px;
-    height: 40px;
-}
-.maps{
-    grid-column-start: 3;
-    grid-column-end: 8;
-    grid-row-start: 2;
-    grid-row-end: 6;
-}
-.parrafo-sede{
-    grid-column-start: 4;
-    grid-column-end: 7;
-    grid-row-start: 8;
-    grid-row-end: 9;
-    
-}
-.ubicacion-sede{
-    background-color: black;
-}
-.fotos-sede{
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-}
-.titulo-fotos-sede{
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    font-size: 25px;
-    margin: 20px 0px 0px 0px;
-    padding-left: 5px;
-    background-color: red;
-    border-radius: 15px;
-    width: auto;
-    height: auto;
-}
-.imagen-central {
-    height: 300px;
-    width: 400px;
+  }
+  .main-competidores .box-competidores .cardcomp2 {
     grid-column-start: 5;
-    grid-column-end: 6;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .main-competidores .box-competidores .cardcomp3 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .main-competidores .box-competidores .cardcomp4 {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .main-competidores .box-competidores .cardcomp5 {
+    grid-column-start: 2;
+    grid-column-end: 4;
     grid-row-start: 3;
-    grid-row-end: 6;
-}
-.imagen-lateral-1{
-    height: 150px;
-    width: 200px;
-    grid-column-start: 3;
+    grid-row-end: 4;
+  }
+  .main-competidores .box-competidores .cardcomp6 {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .main-competidores .box-competidores .cardcomp7 {
+    grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 4;
     grid-row-end: 5;
-}
-.imagen-lateral-2{
-    height: 150px;
-    width: 200px;
-    grid-column-start: 7;
-    grid-column-end: 8;
+  }
+  .main-competidores .box-competidores .cardcomp8 {
+    grid-column-start: 5;
+    grid-column-end: 7;
     grid-row-start: 4;
     grid-row-end: 5;
-}
-.parrafo-sede-2{
-    grid-column-start: 5;
-    grid-column-end: 6;
-    grid-row-start: 6;
-    grid-row-end: 7;
-    text-align: center;
-}
-/*----------------      ---------------------------------*/
-
-/* ------------------ PAGINA NOSOTROS-------------- */
- /*----------------------------------------------- */
-/* -----------------------------------------------*/
-.body-nosotros{
-    display: grid;
+  }
+  .main-competidores .box-competidores .cardcomp9 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+  /* ---------    NOSOTROS   ---------- */
+  .main-nosotros {
     grid-template-columns: 100%;
-    grid-template-rows: 95px auto auto;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer"
-    ;
-}
-.header-nosotros{
-grid-area: header;
-}
-.main-nosotros{
-grid-area: main;
-display: grid;
-grid-template-columns: 100%;
-grid-template-rows: auto 500px 500px;
-}
-.footer-nosotros{
-grid-area: footer;
-}
-.presentacion{
-    font-size: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
-}
-.profesora{
-    background-color: black;
-    display:grid;
+    grid-template-rows: auto 650px 900px;
+  }
+  .main-nosotros .profesora {
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-}
-.profesora div img{
-    height: 350px;
-    width: 100%;
-}
-.profesora-img{
-    grid-column-start: 2;    
-    grid-column-end: 5;
+    grid-template-rows: repeat(6, 1fr);
+  }
+  .main-nosotros .profesora-img {
+    grid-column-start: 4;
+    grid-column-end: 10;
     grid-row-start: 3;
     grid-row-end: 4;
-}
-.profesora-titulo{
-    color: white;
-    font-size: 28px;
-    padding-top: 20px;
-    grid-column-start: 6;    
-    grid-column-end: 11;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-.profesora-titulo strong{
-    color: rebeccapurple;
-}
-.profesora-parrafo{
-    color: white;
-    padding-top: 40px;
-    font-size: 25px;
-    grid-column-start: 6;
-    grid-column-end: 11;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
-.alumnos-fotos{
+  }
+  .main-nosotros .profesora-titulo {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    text-align: center;
+  }
+  .main-nosotros .profesora-parrafo {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    font-size: 20;
+    padding-top: 0px;
+  }
+  .main-nosotros .alumnos-fotos {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(7, 1fr);
-
-}
-.titulo-alumnos{
+  }
+  .main-nosotros .titulo-alumnos {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    font-weight: bold;
+    background: linear-gradient(to bottom right, #ff0000, #800000);
+  }
+  .main-nosotros .foto-alumno {
+    grid-column-start: 3;
+    grid-column-end: 9;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+  .main-nosotros .carousel {
+    grid-column-start: 3;
+    grid-column-end: 9;
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+  .main-shop .titulo-shop {
+    border-radius: 10px;
+    width: 400px;
+    font-size: 25px;
+    margin: 20px 0px 20px 50px;
+  }
+  .main-shop section {
+    grid-template-columns: repeat(4);
+    grid-template-rows: repeat(5);
+  }
+  .main-shop section .cardshop1 {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
-    background-color: red;
-    border-radius: 10px;
-}
-.foto-alumno{
+  }
+  .main-shop section .cardshop2 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .main-shop section .cardshop3 {
     grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .main-shop section .cardshop4 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .main-shop section .cardshop5 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+  .main-shop section .cardshop6 {
+    grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 4;
     grid-row-end: 5;
-}
-.foto-alumno img{
-    height: 300px;
-    width: 100%;
-}
-.carousel{
+  }
+  .banner {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr auto 1fr;
+  }
+  .banner h1 {
+    padding-top: 30px;
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .parrafo-banner {
+    padding-top: 30px;
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .logo-banner {
+    padding-top: 20px;
     grid-column-start: 5;
-    grid-column-end: 10;
-    grid-row-start: 4;
-    grid-row-end: 5;
-}
-.fotog1{
-    height: 300px;
-    width: 400px;
-}
-.fotog2{
-    height: 300px;
-    width: 400px;
-}
-.fotog3{
-    height: 300px;
-    width: 400px;
-}
-.pteam{
-font-size: 30px;
-
-}
-/* ----------------------------PAGINA SHOP---------------------------------------- */
-/* ------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------*/
-.hero-shop{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 95px 1fr auto;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer"
-    ;
-}
-.header-shop{
-    grid-area: header;
-}
-.main-shop{
-    grid-area: main;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto, auto;
-}
-.footer-shop{
-    grid-area: footer;
-}
-.box-tienda{
-    display: grid;
-    grid-template-columns: repeat(6);
-    grid-template-rows:auto 1fr 1fr 5vh;
-    grid-gap: 20px;
-}
-.cardshop1{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-.cardshop2{
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .box {
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .box div {
+    font-size: 18px;
+  }
+  .box div img {
+    width: 100%;
+    border-radius: 100px;
+  }
+  .card1 {
     grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-.cardshop3{
-    grid-column-start: 6;
-    grid-column-end: 7;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-.cardshop4{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
-.cardshop5{
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
-.cardshop6{
-    grid-column-start: 6;
-    grid-column-end: 7;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
-.titulo-shop{
-    grid-column-start: 2;
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 2;
-    background-color: red;
-    font-size: 40px;
-    margin: 40px 40px 40px 0px;
-}
-.selector-tienda{
-    background-color: #3a3737;
-    display: flex;
-    padding: 20px 60px 20px 60px;
-    justify-content: space-between;
-}
-.selector-tienda h2{
-    font-size: 40px;
-}
-.selector-tienda div input{
-    border: 2px solid #494545;
-    border-radius: 10x;
-    background-color: #534f4f;
-    width: 200px;
-    margin-top: 10px;
-}
-.card-tienda{
-    width: 220px;
-    height: 300px;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8),0% ,rgba(0,0,0,0.6)50%,rgba(0,0,0,0.4)100%);
-    border: 2px solid rgb(44, 43, 43);
-    border-radius: 5px;
-    overflow: hidden;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    padding: 20px;
-}
-.card-tienda img{
-    margin: 0;
-    padding: 0;
-    height: 70%;
-    width: 100%;
-}
-/* ----------------------- C O M P E T I D O R E S ----------------------------- */
-/* -----------------------------------------------------------------------------*/
-/* --------------------------------------------------------------------------- */
-.hero-competidores{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 95px 1fr auto;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer"
-    ;
-}
-.header-competidores{
-    grid-area: header;
-}
-.main-competidores{
-    grid-area: main;
-    display: grid;
-    grid-template-columns:100%;
-    grid-template-rows: auto auto 1100px;
-
-}
-/* .box-competidores{
-    padding: 50px 0px 50px 0px;
-} */
-.footer-competidores{
-    grid-area: footer;
-}
-.banner-competidores{
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-flow: row wrap;
-    column-gap: 100px;
-    justify-content: center;
-}
-.banner-competidores h2{
-    margin-top: 33px;
-}
-.logo-dojo img{
-    width: 100px;
-    height: 100px;
-}
-.card-competidores{
-    width: 100%;
-    height: 340px;
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-}
-.card-competidores img{
-    width: 100%;
-    height: 100%;
-}
-.card-competidores .overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.card-competidores:hover .overlay{
-    opacity: 1;
-}
-.card .overlay p{
-    max-width: 90%;
-    margin: 0 auto;
-    font-size: 1.5em;
-    line-height: 1.5em;
-}
-.box-competidores{
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-}
-.cardcomp1{
-    grid-column-start: 2;
-    grid-column-end: 4;
+  }
+  .card2 {
+    grid-column-start: 4;
+    grid-column-end: 5;
     grid-row-start: 2;
     grid-row-end: 3;
-}
-.cardcomp2{
-    grid-column-start: 5;
-    grid-column-end: 7;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-.cardcomp3{
-    grid-column-start: 8;
-    grid-column-end: 10;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-.cardcomp4{
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 5;
-}
-.cardcomp5{
-    grid-column-start: 5;
-    grid-column-end: 7;
-    grid-row-start: 4;
-    grid-row-end: 5;
-}
-.cardcomp6{
-    grid-column-start: 8;
-    grid-column-end: 10;
-    grid-row-start: 4;
-    grid-row-end: 5;
-}
-.cardcomp7{
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 6;
-    grid-row-end: 7;
-}
-.cardcomp8{
-    grid-column-start: 5;
-    grid-column-end: 7;
-    grid-row-start: 6;
-    grid-row-end: 7;
-}
-.cardcomp9{
-    grid-column-start: 8;
-    grid-column-end: 10;
-    grid-row-start: 6;
-    grid-row-end: 7;
-}
-@media(max-width:956px){
-    header div a img{
-        margin: 0px 0px 0px 30px;
-    }
-    .menu a{
-        font-size: 18px;
-        /* margin: ; */
-    }
-    .menu ul{
-        padding: 0px 0px;
-    }
-}
-@media(max-width: 768px){
-    header div a img{
-        width: 90px;
-        margin: 0px 0px 0px 340px;
-        height: 90px;
-        border-radius: 40px;
-    }
-    .mostrar-menu,
-    .esconder-menu{
-        display: block;
-    }
-    .menu{
-        position:fixed;
-        width: 100%;
-        height: 100vh;
-        background: rgb(49, 49, 49);
-        /* left: 0; */
-        right: -100%;
-        top: 0;
-        text-align: center;
-        padding: 100px 0px;
-        z-index: 100;
-        transition: 0.8s;
-        
-    }
-
-    .menu a{
-        display: block;
-        padding: 20px;
-        
-    }
-    .esconder-menu{
-        position: absolute;
-        top: 40px;
-        right: 40px;
-    }
-    #check:checked ~ .menu{
-        right: 0;
-    }
-    /* ---------    COMPETIDORES---------- */
-    .main-competidores{
-        grid-template-rows: auto auto 1900px;
-    
-    }
-    .box-competidores{
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        grid-template-rows: repeat(11, 1fr);
-    }
-    .cardcomp1{
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-    .cardcomp2{
-        grid-column-start: 5;
-        grid-column-end: 7;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-    .cardcomp3{
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 4;
-        grid-row-end: 5;
-    }
-    .cardcomp4{
-        grid-column-start: 5;
-        grid-column-end: 7;
-        grid-row-start: 4;
-        grid-row-end: 5;
-    }
-    /* fila 3 */
-    .cardcomp5{
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 6;
-        grid-row-end: 7;
-    }
-    .cardcomp6{
-        grid-column-start: 5;
-        grid-column-end: 7;
-        grid-row-start: 6;
-        grid-row-end: 7;
-    }
-    /* fila 4 */
-    .cardcomp7{
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 8;
-        grid-row-end: 9;
-    }
-    .cardcomp8{
-        grid-column-start: 5;
-        grid-column-end: 7;
-        grid-row-start: 8;
-        grid-row-end: 9;
-    }
-    .cardcomp9{
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 10;
-        grid-row-end: 11;
-    }
-    /* ---------    NOSOTROS   ---------- */
-    .main-nosotros{
-        grid-template-columns: 100%;
-        grid-template-rows: auto 650px 900px;
-        }
-        .profesora{
-            grid-template-columns: repeat(12, 1fr);
-            grid-template-rows: repeat(6, 1fr);
-        }
-    .profesora-img{
-    grid-column-start: 4;    
-    grid-column-end: 10;
+  }
+  .card3 {
+    grid-column-start: 4;
+    grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end: 4;
+  }
 }
-    .profesora-titulo{
-        grid-column-start: 2;    
-        grid-column-end: 12;
-        grid-row-start: 4;
-        grid-row-end: 5;
-        font-size: 25px;
-        text-align: center;
-    }
-    .profesora-parrafo{
-        grid-column-start: 2;
-        grid-column-end: 12;
-        grid-row-start: 5;
-        grid-row-end: 6;
-        font-size: 20;
-        padding-top: 0px;
-    }
-    .alumnos-fotos{
-        display: grid;
-        grid-template-columns: repeat(10, 1fr);
-        grid-template-rows: repeat(7, 1fr);
-    
-    }
-    .titulo-alumnos{
-        grid-column-start: 2;
-        grid-column-end: 5;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        font-weight: bold;
-        background: linear-gradient( to bottom right, #ff0000, #800000);
-    }
-    .foto-alumno{
-        grid-column-start: 3;
-        grid-column-end: 9;
-        grid-row-start: 4;
-        grid-row-end: 5;
-    }
-    .carousel{
-        grid-column-start: 3;
-        grid-column-end: 9;
-        grid-row-start: 6;
-        grid-row-end: 7;
-    }
+@media (max-width: 645px) {
+  header div a img {
+    width: 90px;
+    margin: 0px 0px 0px 280px;
+    height: 90px;
+    border-radius: 40px;
+  }
+  .main-index {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto 150px;
+  }
+  .frase p {
+    font-size: 34px;
+  }
 }
-@media(max-width:645px){
-    header div a img{
-        width: 90px;
-        margin: 0px 0px 0px 280px;
-        height: 90px;
-        border-radius: 40px;
-    }
+@media (max-width: 605px) {
+  .main-competidores .banner-competidores {
+    column-gap: 50px;
+  }
+  .main-competidores .banner-competidores h2 {
+    margin-top: 15px;
+  }
+  .main-competidores .banner-competidores div img {
+    width: 70px;
+    height: 70px;
+  }
+  .frase p {
+    font-size: 35px;
+  }
 }
-@media(max-width:605px){
-
-    .banner-competidores{
-        column-gap: 50px;
-
-    }
-    .logo-dojo img{
-        width: 100px;
-        height: 100px;
-    }
+@media (max-width: 580px) {
+  header div a img {
+    margin: 0px 0px 0px 210px;
+  }
 }
-
-@media(max-width:580px){
-    header div a img{
-        margin: 0px 0px 0px 210px;
-    }
+@media (max-width: 574px) {
+  header div a img {
+    margin: 0px 0px 0px 190px;
+  }
 }
-@media(max-width:574px){
-    /* .box-competidores{
-        margin: 40px 30px 40px 160px;
-    } */
-    header div a img{
-        margin: 0px 0px 0px 190px;
-    }
+@media (max-width: 524px) {
+  .main-shop {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+  }
+  .main-shop .titulo-shop {
+    width: 325px;
+    font-size: 20px;
+    margin: 20px 0px 20px 10px;
+  }
+  .main-shop section {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+  .main-shop section .cardshop1 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .main-shop section .cardshop2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .main-shop section .cardshop3 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .main-shop section .cardshop4 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+  .main-shop section .cardshop5 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+  .main-shop section .cardshop6 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+  .frase p {
+    font-size: 28px;
+  }
 }
-@media(max-width:486px){
-    header div a img{
-        margin: 0px 0px 0px 180px;
-    }
-    .presentacion{
-        padding:0px 0px 10px 0px;
-        font-size: 20px;
-    }
+@media (max-width: 486px) {
+  header div a img {
+    margin: 0px 0px 0px 180px;
+  }
+  .presentacion {
+    padding: 0px 0px 10px 0px;
+    font-size: 20px;
+  }
+  .main-nosotros .profesora .profesora-parrafo {
+    font-size: 18px;
+  }
+  .selector-tienda {
+    padding: 10px 20px 10px 20px;
+  }
+  .selector-tienda h2 {
+    font-size: 25px;
+  }
+  .selector-tienda div input {
+    width: 100px;
+  }
+  .logo-banner {
+    grid-column-start: 3;
+    grid-column-end: 11;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
 }
-@media(max-width:468px){
-    header div a img{
-        margin: 0px 0px 0px 160px;
-        height: 70px;
-        width: 70px;
-    }
-    .menu{
-        padding-right: 10px;
-    }
-    .presentacion{
-        padding:0px 0px 10px 0px;
-        font-size: 20px;
-    }
-
-    .logo-dojo{
-        width: 75px;
-        height: 75px;
-    }
-    .logo-dojo img{
-        width: 75px;
-        height: 75px;
-    }
-    /* ---------    NOSOTROS -------- */
-    .profesora-img{
-        grid-column-start: 3;    
-        grid-column-end: 11;
-        grid-row-start: 3;
-        grid-row-end: 4;
-    }
-    .profesora-titulo{
-        font-size: 18px;
-    }
-    .profesora-parrafo{
-        font-size: 16px;
-        text-align: center;
-    }
-    .foto-alumno{
-        grid-column-start: 2;
-        grid-column-end: 10;
-        grid-row-start: 4;
-        grid-row-end: 5;
-    }
-    .carousel{
-        grid-column-start: 2;
-        grid-column-end: 10;
-        grid-row-start: 6;
-        grid-row-end: 7;
-    }
-    footer{
-        display: flex;
-        flex-direction: column;
-        }
-
-}
-
-
-@media(max-width:426px){
-    header{
-        gap: 10px;
-    }
-    header div a img{
-        width: 70px;
-        margin: 0px 0px 0px 160px;
-        height: 70px;
-        border-radius: 40px;
-    }
-    /* ---------    COMPETIDORES---------- */
-    .main-competidores{
-        grid-template-rows: auto auto 3200px;
-    }
-    .box-competidores{
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        grid-template-rows: repeat(19, 1fr);
-    }
-    .cardcomp1{
-        grid-column-start: 2;
-        grid-column-end: 7;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-    .cardcomp2{
-        grid-column-start: 2;
-        grid-column-end: 7;
-        grid-row-start: 4;
-        grid-row-end: 5;
-    }
-    .cardcomp3{
-        grid-column-start: 2;
-        grid-column-end: 7;
-        grid-row-start: 6;
-        grid-row-end: 7;
-    }
-    .cardcomp4{
-        grid-column-start: 2;
-        grid-column-end: 7;
-        grid-row-start: 8;
-        grid-row-end: 9;
-    }
-    /* fila 3 */
-    .cardcomp5{
-        grid-column-start: 2;
-        grid-column-end: 7;
-        grid-row-start: 10;
-        grid-row-end: 11;
-    }
-    .cardcomp6{
-        grid-column-start: 2;
-        grid-column-end: 7;
-        grid-row-start: 12;
-        grid-row-end: 13;
-    }
-    /* fila 4 */
-    .cardcomp7{
-        grid-column-start: 2;
-        grid-column-end: 7;
-        grid-row-start: 14;
-        grid-row-end: 15;
-    }
-    .cardcomp8{
-        grid-column-start: 2;
-        grid-column-end: 7;
-        grid-row-start: 16;
-        grid-row-end: 17;
-    }
-    .cardcomp9{
-        grid-column-start: 2;
-        grid-column-end: 7;
-        grid-row-start: 18;
-        grid-row-end: 19;
-    }
-}
-@media(max-width:395px){
-    .banner-competidores{
-        column-gap: 20px;
-    }
-    .banner-competidores h2{
-        margin-top: 20px;
-        font-size: 22px;
-    }
-    .logo-dojo{
-        width: 70px;
-        height: 70px;
-    }
-    .logo-dojo img{
-        width: 70px;
-        height: 70px;
-    }
-    .list-footer-2 h2{
-        font-size: 22px;
-    }
-    .list-footer-2 ul li{
-        font-size: 16px;
-    } 
-    .list-footer h2{
-        font-size: 22px;
-    }
-    .list-footer ul li{
-        font-size: 16px;
-    } 
-}
-@media(max-width:384px){
-    header div a img{
-        width: 70px;
-        margin: 0px 0px 0px 145px;
-        height: 70px;
-        border-radius: 40px;
-    }
-    .presentacion{
-        padding:0px 0px 10px 0px;
-        font-size: 15px;
-    }
-    .banner-competidores{
-        column-gap: 20px;
-    }
-    .banner-competidores h2{
-        margin-top: 20px;
-        font-size: 22px;
-    }
-    .logo-dojo{
-        width: 65px;
-        height: 65px;
-    }
-    .logo-dojo img{
-        width: 65px;
-        height: 65px;
-    }
-}
-@media(max-width:320px){
-    header{
-        gap: 20px;
-    }
-    header div a img{
-        width: 70px;
-        margin: 0px 0px 0px 110px;
-        height: 70px;
-        border-radius: 40px;
-    }
-    .banner-competidores{
-        column-gap: 0px;
-    }
-    .presentacion{
-        padding:0px 0px 10px 0px;
-        font-size: 20px;
-    }
-    .banner-competidores h2{
-        font-size: 25px;
-    }
-    .logo-dojo{
-        width: 75px;
-        height: 75px;
-    }
-    .logo-dojo img{
-        width: 75px;
-        height: 75px;
-    }
-    footer{
+@media (max-width: 468px) {
+  header div a img {
+    margin: 0px 0px 0px 160px;
+    height: 70px;
+    width: 70px;
+  }
+  .menu {
+    padding-right: 10px;
+  }
+  .presentacion {
+    padding: 0px 0px 10px 0px;
+    font-size: 20px;
+  }
+  .main-competidores .banner-competidores h2 {
+    margin-top: 5px;
+  }
+  .main-competidores .banner-competidores .logo-dojo img {
+    width: 50px;
+    height: 50px;
+  }
+  .logo-dojo {
+    width: 50px;
+    height: 50px;
+  }
+  /* ---------    NOSOTROS -------- */
+  .profesora-img {
+    grid-column-start: 3;
+    grid-column-end: 11;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .profesora-titulo {
+    font-size: 18px;
+  }
+  .profesora-parrafo {
+    font-size: 16px;
+    text-align: center;
+  }
+  .foto-alumno {
+    grid-column-start: 2;
+    grid-column-end: 10;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+  .carousel {
+    grid-column-start: 2;
+    grid-column-end: 10;
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+  footer {
     display: flex;
     flex-direction: column;
-    }
-    
+  }
+  .header-shop {
+    height: 95px;
+  }
+  .header-index {
+    height: 95px;
+  }
+}
+@media (max-width: 426px) {
+  header {
+    gap: 10px;
+  }
+  header div a img {
+    width: 70px;
+    margin: 0px 0px 0px 160px;
+    height: 70px;
+    border-radius: 40px;
+  }
+  /* ---------    COMPETIDORES---------- */
+  .main-competidores {
+    grid-template-rows: auto auto 3200px;
+  }
+  .main-competidores .box-competidores {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    /* fila 3 */
+    /* fila 4 */
+  }
+  .main-competidores .box-competidores .cardcomp1 {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .main-competidores .box-competidores .cardcomp2 {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .main-competidores .box-competidores .cardcomp3 {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .main-competidores .box-competidores .cardcomp4 {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+  .main-competidores .box-competidores .cardcomp5 {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+  .main-competidores .box-competidores .cardcomp6 {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+  .main-competidores .box-competidores .cardcomp7 {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 7;
+    grid-row-end: 8;
+  }
+  .main-competidores .box-competidores .cardcomp8 {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 8;
+    grid-row-end: 9;
+  }
+  .main-competidores .box-competidores .cardcomp9 {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 9;
+    grid-row-end: 10;
+  }
+  .banner h1 {
+    font-size: 40px;
+  }
+  .parrafo-banner {
+    font-size: 25px;
+  }
+  .entrena p {
+    grid-column-start: 1;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end: 5;
+  }
+  .frase p {
+    color: white;
+    font-size: 35px;
+  }
+}
+@media (max-width: 395px) {
+  .banner-competidores {
+    column-gap: 20px;
+  }
+  .banner-competidores h2 {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+  .logo-dojo {
+    width: 70px;
+    height: 70px;
+  }
+  .logo-dojo img {
+    width: 70px;
+    height: 70px;
+  }
+  .list-footer-2 h2 {
+    font-size: 22px;
+  }
+  .list-footer-2 ul li {
+    font-size: 16px;
+  }
+  .list-footer h2 {
+    font-size: 22px;
+  }
+  .list-footer ul li {
+    font-size: 16px;
+  }
+}
+@media (max-width: 384px) {
+  header div a img {
+    width: 70px;
+    margin: 0px 0px 0px 145px;
+    height: 70px;
+    border-radius: 40px;
+  }
+  .presentacion {
+    padding: 0px 0px 10px 0px;
+    font-size: 15px;
+  }
+  .main-competidores .banner-competidores {
+    column-gap: 10px;
+  }
+  .main-nosotros .alumnos-fotos {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+  }
+  .main-nosotros .alumnos-fotos h2 {
+    background-color: red;
+    border-radius: 10px;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .banner-competidores h2 {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+  .logo-dojo {
+    width: 65px;
+    height: 65px;
+  }
+  .logo-dojo img {
+    width: 65px;
+    height: 65px;
+  }
+  .selector-tienda {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1px 0px 5px;
+    justify-content: none;
+  }
+  .selector-tienda h2 {
+    font-size: 25px;
+  }
+  .selector-tienda div input {
+    width: 100px;
+    margin-top: 0px;
+  }
+  .main-shop .titulo-shop {
+    width: 250px;
+    font-size: 16px;
+    margin: 10px;
+  }
+  .frase p {
+    font-size: 22px;
+  }
+}
+@media (max-width: 320px) {
+  header {
+    gap: 20px;
+  }
+  header div a img {
+    width: 70px;
+    margin: 0px 0px 0px 110px;
+    height: 70px;
+    border-radius: 40px;
+  }
+  .banner-competidores {
+    column-gap: 0px;
+  }
+  .presentacion {
+    padding: 0px 0px 10px 0px;
+    font-size: 20px;
+  }
+  .banner-competidores h2 {
+    font-size: 25px;
+  }
+  .logo-dojo {
+    width: 75px;
+    height: 75px;
+  }
+  .logo-dojo img {
+    width: 75px;
+    height: 75px;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-nosotros .profesora .profesora-parrafo {
+    font-size: 16px;
+  }
+  .banner h1 {
+    font-size: 30px;
+  }
+  .parrafo-banner {
+    font-size: 20px;
+  }
 }
