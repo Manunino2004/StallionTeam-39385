@@ -662,7 +662,7 @@ footer div {
   grid-area: main;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: auto 600px auto;
+  grid-template-rows: auto auto;
 }
 
 .presetacion {
@@ -677,7 +677,7 @@ footer div {
   color: white;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-rows: repeat(9, 1fr);
 }
 .ubicacion-sede h2 {
   grid-column-start: 2;
@@ -695,8 +695,8 @@ footer div {
   overflow: hidden;
   grid-column-start: 3;
   grid-column-end: 8;
-  grid-row-start: 2;
-  grid-row-end: 7;
+  grid-row-start: 3;
+  grid-row-end: 9;
 }
 .ubicacion-sede div iframe {
   position: absolute;
@@ -706,70 +706,12 @@ footer div {
   height: 100%;
 }
 .ubicacion-sede p {
-  margin: 20px 0px 0px 50px;
-  grid-column-start: 4;
-  grid-column-end: 7;
-  grid-row-start: 7;
-  grid-row-end: 8;
-}
-
-.fotos-sede {
-  display: grid;
-  grid-template-columns: repeat(11, 1fr);
-  grid-template-rows: repeat(7, 1fr);
-}
-
-.titulo-fotos-sede {
-  grid-column-start: 3;
-  grid-column-end: 7;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  font-size: 25px;
-  margin: 20px 0px 0px 0px;
-  padding-left: 5px;
-  background-color: red;
-  border-radius: 15px;
-  width: 270px;
-  height: auto;
-}
-
-.imagen-central {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  grid-column-start: 5;
-  grid-column-end: 8;
-  grid-row-start: 3;
-  grid-row-end: 7;
-}
-
-.imagen-lateral-1 {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 4;
-  grid-row-end: 6;
-}
-
-.imagen-lateral-2 {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  grid-column-start: 9;
-  grid-column-end: 11;
-  grid-row-start: 4;
-  grid-row-end: 6;
-}
-
-.parrafo-sede-2 {
-  grid-column-start: 3;
-  grid-column-end: 8;
-  grid-row-start: 7;
-  grid-row-end: 8;
-  font-size: 25px;
   text-align: center;
+  margin: 20px 0px 0px 50px;
+  grid-column-start: 2;
+  grid-column-end: 9;
+  grid-row-start: 9;
+  grid-row-end: 10;
 }
 
 .footer-sede {
@@ -1088,6 +1030,18 @@ header .esconder-menu {
 @media (max-width: 580px) {
   header div a img {
     margin: 0px 0px 0px 210px;
+  }
+  .ubicacion-sede div {
+    grid-column-start: 2;
+    grid-column-end: 9;
+    grid-row-start: 2;
+    grid-row-end: 8;
+  }
+  .ubicacion-sede p {
+    grid-column-start: 2;
+    grid-column-end: 9;
+    grid-row-start: 8;
+    grid-row-end: 9;
   }
 }
 @media (max-width: 574px) {
