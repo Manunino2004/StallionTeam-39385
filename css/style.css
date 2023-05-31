@@ -321,14 +321,6 @@ footer div {
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(7, 1fr);
 }
-.alumnos-fotos h2 {
-  background-color: red;
-  border-radius: 10px;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
 .alumnos-fotos div {
   grid-column-start: 2;
   grid-column-end: 4;
@@ -346,6 +338,50 @@ footer div {
   grid-row-end: 5;
 }
 
+.titulo-alumnos {
+  border-radius: 10px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  position: relative;
+  display: inline-block;
+  color: black;
+  animation: movimiento-dos 2s linear infinite;
+}
+
+.titulo-alumnos::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, red, hsl(0deg, 40%, 60%));
+  background-size: 200% auto;
+  z-index: -1;
+  animation: movimiento 5s linear infinite;
+}
+
+@keyframes movimiento {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+@keyframes movimiento-dos {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .fotog {
   height: 300px;
   width: 400px;
@@ -424,8 +460,9 @@ footer div {
   background-image: url("../assets/img/entrena-foto.jpg");
   width: 100%;
   height: 600px;
-  background-repeat: none;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(5, 1fr);
@@ -516,6 +553,7 @@ footer div {
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .frase p {
   color: white;
@@ -562,6 +600,7 @@ footer div {
   display: flex;
   text-align: center;
   flex-direction: column;
+  transition: transform 0.3s;
 }
 .main-shop section div img {
   margin: 0;
@@ -574,6 +613,9 @@ footer div {
 }
 .main-shop section div div p {
   font-size: 16px;
+}
+.main-shop section div:hover {
+  transform: scale(1.1);
 }
 
 .selector-tienda {
@@ -1282,6 +1324,31 @@ header .esconder-menu {
   .frase p {
     color: white;
     font-size: 35px;
+  }
+  .main-nosotros .profesora div {
+    grid-column-start: 3;
+    grid-column-end: 11;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .main-nosotros .profesora div img {
+    height: 290px;
+  }
+  .main-nosotros .foto-alumno {
+    grid-column-start: 2;
+    grid-column-end: 10;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+  .main-nosotros .carousel {
+    grid-column-start: 2;
+    grid-column-end: 10;
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+  .main-nosotros .fotog {
+    height: 200px;
+    width: 400px;
   }
 }
 @media (max-width: 395px) {
