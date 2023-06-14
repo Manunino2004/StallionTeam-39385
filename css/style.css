@@ -402,7 +402,7 @@ footer div {
   grid-area: main;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: auto auto auto 250px;
+  grid-template-rows: auto auto auto 350px;
 }
 
 .banner {
@@ -1048,7 +1048,7 @@ header .esconder-menu {
   }
   .main-index {
     grid-template-columns: 100%;
-    grid-template-rows: auto auto auto 150px;
+    grid-template-rows: auto auto auto 300px;
   }
   .frase p {
     font-size: 34px;
@@ -1089,6 +1089,72 @@ header .esconder-menu {
 @media (max-width: 574px) {
   header div a img {
     margin: 0px 0px 0px 190px;
+  }
+}
+@media (max-width: 560px) {
+  .main-competidores {
+    grid-template-rows: auto auto 3200px;
+  }
+  .main-competidores .box-competidores {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    /* fila 3 */
+    /* fila 4 */
+  }
+  .main-competidores .box-competidores .cardcomp1 {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .main-competidores .box-competidores .cardcomp2 {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .main-competidores .box-competidores .cardcomp3 {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .main-competidores .box-competidores .cardcomp4 {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+  .main-competidores .box-competidores .cardcomp5 {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+  .main-competidores .box-competidores .cardcomp6 {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+  .main-competidores .box-competidores .cardcomp7 {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 7;
+    grid-row-end: 8;
+  }
+  .main-competidores .box-competidores .cardcomp8 {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 8;
+    grid-row-end: 9;
+  }
+  .main-competidores .box-competidores .cardcomp9 {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 9;
+    grid-row-end: 10;
   }
 }
 @media (max-width: 524px) {
@@ -1323,7 +1389,7 @@ header .esconder-menu {
   }
   .frase p {
     color: white;
-    font-size: 35px;
+    font-size: 25px;
   }
   .main-nosotros .profesora div {
     grid-column-start: 3;
